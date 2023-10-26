@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Booking</title>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Apricots" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>Film Spotter</h1>
+        <div id="searchbar">
+            <input type="text" id="search" placeholder="Search movies">
+        <select id="genre-select">
+            <option value="">All Genres</option>
+            <option value="Action">Action</option>
+            <option value="Comedy">Comedy</option>
+            <option value="Drama">Drama</option>
+            <option value="Romantic">Romantic</option>
+            <option value="Adventure">Adventures</option>
+            
+            <!-- Add more genre options here -->
+        </select>
+        </div>
+    </header>
+    <main>
+        <div class="movie-container">
+            <div class="movie-list">
+                <!-- Movie cards will be dynamically generated here -->
+            </div>
+        </div>
+        <div class="movie-details">
+            <div class="details-content">
+                <h2 class="centered-heading">Movie Details</h2>
+                <h4>Movie Title</h4>
+                <p>Genre: </p>
+                <p>Description: </p>
+                <p>Price: </p>
+                <div class="ticket-input">
+                    <label for="ticketQuantity">No. Of Tickets:</label>
+                    <input type="number" id="ticketQuantity" value="1" min="1">
+                </div>
+                <button onclick="bookMovie()">Book Now</button>
+            </div>
+        </div>
+        <div class="modal">
+            <div class="modal-content">
+                <a class="modal-close-button" onclick="closeModal()">Close</a>
+                <!-- Movie details will be displayed here by JavaScript -->
+            </div>
+        </div>
+        
+    </main>
+    <footer style="background-color: grey; padding-top: 10px; padding-bottom: 10px; color: white; text-align: center;">
+        &copy; 2023 Movie Booking
+    </footer>
+    <script src="./script.js"></script>
+</body>
+</html>
